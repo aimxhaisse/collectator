@@ -21,7 +21,7 @@ type Collectator struct {
 func (c *Collectator) Run() {
 	for {
 		c.refreshMetrics()
-		fmt.Printf("load_avg:%f\n", c.loadAvg)
+		fmt.Printf("collectator> load_avg:%f\n", c.loadAvg)
 		time.Sleep(time.Duration(c.periodSec) * time.Second)
 	}
 }
