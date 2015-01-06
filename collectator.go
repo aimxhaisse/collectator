@@ -48,7 +48,6 @@ func (c *Collectator) refreshMemory() {
 			line := scan.Text()
 
 			if m := re_mem_active.FindStringSubmatch(line); m != nil {
-				fmt.Printf("match=%s\n", m[1])
 				c.memActive, err = strconv.ParseFloat(m[1], 64)
 			}
 		}
