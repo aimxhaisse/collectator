@@ -44,7 +44,8 @@ type ProcStatCollector struct {
 func (c *Collectator) Run() {
 	for {
 		c.refreshMetrics()
-		fmt.Printf("collectator> load_avg:%f mem_active:%f cpu_user:%f cpu_nice:%f cpu_system:%f cpu_idle:%f cpu_iowait:%f cpu_irq:%f cpu_softirq:%f cpu_guest:%f cpu_guest_nice:%f\n",
+		fmt.Printf("collectator> time:%d load_avg:%f mem_active:%f cpu_user:%f cpu_nice:%f cpu_system:%f cpu_idle:%f cpu_iowait:%f cpu_irq:%f cpu_softirq:%f cpu_guest:%f cpu_guest_nice:%f\n",
+			time.Now().Unix(),
 			c.loadAvg,
 			c.memActive,
 			c.procStats.stats.user,
