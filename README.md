@@ -19,3 +19,11 @@ A binary that periodically polls several metrics from a system.
 * `load_avg` load average (1 minute)
 * `mem_active` active memory in kb
 * `cpu_*` global % CPU usage (using first line from /proc/stats)
+
+## Compile
+
+    go build
+
+## Compile for armv7l
+
+   make
