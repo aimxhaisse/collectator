@@ -36,6 +36,19 @@ type ProcStat struct {
 	guest_nice float64
 }
 
+type SoftIRQs struct {
+	HI          int
+	Timer       int
+	NetTX       int
+	NetRX       int
+	Block       int
+	BlockIOPoll int
+	TaskLet     int
+	Sched       int
+	HRTimer     int
+	RCU         int
+}
+
 type ProcStatCollector struct {
 	last  *ProcStat // last values found in /proc/stat
 	stats ProcStat  // in %
